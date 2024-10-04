@@ -3,8 +3,11 @@
     padding: 0;
 }
 body {
-    font-family: "Poppins", sans-serif;
-    background-color: #d5d5c9;
+    margin: 0; 
+    font-family: 'Poppins', sans-serif; 
+    background-image: url('assents/foto.jpg');  
+    background-size: 100%;  
+    
 }
 
 nav{

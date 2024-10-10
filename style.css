@@ -1,41 +1,99 @@
 * {
     margin: 0;
     padding: 0;
-}
-body {
-    margin: 0; 
-    font-family: 'Poppins', sans-serif; 
-    background-image: url('assents/foto.jpg');  
-    background-size: 100%;  
-    
+    box-sizing: border-box; /* Adicionando box-sizing */
 }
 
-nav{
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('assents/foto.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+nav {
     background-color: #23232e;
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 8vh;
+    z-index: 10; /* Fica sobreposto */
+    position: fixed; /* Navbar fixa */
+    top: 0; /* Fixa no topo */
+    width: 100%; /* Ocupa toda a largura */
 }
 
 .logo {
     text-transform: uppercase;
     letter-spacing: 2px;
+    color: #00ffff; /* Cor da logo */
 }
 
-a{
+a {
     color: rgb(0, 255, 255);
     text-decoration: none;
     transition: 0.4s;
 }
 
-a:hover{
+a:hover {
     opacity: 0.7;
 }
 
-ul{
+ul {
     display: flex;
     list-style: none;
     gap: 30px;
     letter-spacing: 2.5px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    margin-top: 8vh; /* Empurra o conteúdo para baixo */
+    height: calc(100vh - 8vh); /* Altura total menos a altura da navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Texto da homepage */
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.8); /* Fundo claro para contraste */
+    margin-top: 20px; /* Espaço adicional */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.sobre {
+    display: none; /* Inicialmente oculta */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sobre img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px; /* Bordas arredondadas */
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    max-width: 600px;
+    font-size: 18px;
+    margin: 0 20px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: #00ffff; /* Cor do botão de fechar */
+    font-size: 24px;
 }

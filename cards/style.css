@@ -17,8 +17,9 @@ body{
 }
 
 
-main{
+main {
     padding: 20px;
+    margin-top: 80px; /* ajuste conforme a altura da navbar */
 }
 
 

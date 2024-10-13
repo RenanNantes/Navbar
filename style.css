@@ -1,74 +1,97 @@
 @import url('reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('/style.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
 :root{
-    --cor-fundo: black;
-    --cor-texto: white;
-    --cor-fundo-card: gray;
-    font-size: 14px;
+    --cor-fundo: #f0f0f0; /* Fundo claro */
+    --cor-texto: #333; /* Texto escuro */
+    --cor-navbar: #1a1a1a; /* Fundo da navbar escuro */
+    --cor-texto-navbar: #fff; /* Texto da navbar claro */
+    --cor-botao: #007BFF; /* Cor de botão chamativa */
+    --cor-botao-hover: #0056b3; /* Cor de botão ao passar o mouse */
+    --padding-padrao: 20px;
+    font-size: 16px;
 }
-
 
 body{
-    font-family: 'montserrat', sans-serif;
-    background-image: none;
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--cor-fundo);
-    color: var(--cor-texto)
-
+    color: var(--cor-texto);
+    margin: 0;
+    padding: 0;
 }
 
-main{
-    padding: 20px;
+/* Estilo da Navbar */
+nav {
+    background-color: var(--cor-navbar);
+    padding: var(--padding-padrao);
 }
 
-h2, h3, strong{
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: var(--cor-texto-navbar);
+    text-decoration: none;
     font-weight: bold;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
 }
 
-h2{
-    /* Rem: unidade de medida relativa ao font-size do elemento raiz (html) */
-    font-size: 1.75rem;
+nav ul li a:hover {
+    background-color: var(--cor-texto);
+    color: var(--cor-navbar);
+    border-radius: 5px;
+}
+
+/* Estilo do Conteúdo Principal */
+main {
+    padding: var(--padding-padrao);
     text-align: center;
 }
 
-h3{
-    /* em: Unidade de medida relativa ao font-size do elemento imediatamente pai */
-    font-size: 1.5em;
+main h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: var(--cor-texto);
 }
 
-.produto-lista{
-    margin-top: 24px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
+main p {
+    font-size: 1.125rem;
+    color: #666;
 }
 
-.produto-lista .produto img{
-    width: 180px;
-    border-radius: 14px;
+/* Estilo dos Botões */
+button {
+    background-color: var(--cor-botao);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.produto-lista .produto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    padding: 20px;
-    gap: 18px;
-    width: 200px;
-    background-color: var(--cor-fundo-card);
-    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
-    transition: 0.5s;
+button:hover {
+    background-color: var(--cor-botao-hover);
 }
 
-.produto-lista .produto:hover{
-    /*background-color: blue */
-    cursor: pointer; 
-    transform: scale(1.08)
-}
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
 
-.produto-lista, .produto span{
-    text-align: justify;
+    main h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        width: 100%;
+    }
 }

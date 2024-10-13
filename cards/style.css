@@ -3,7 +3,8 @@
 @import url('/Navbar/style.css');
 
 main {
-    margin-top: 80px; /* ajuste conforme a altura da navbar */
+    margin-top: 60px; /* ajuste para coincidir com a altura da navbar */
+    padding: 20px;
 }
 
 :root{
@@ -25,8 +26,9 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 80px; /* ajuste conforme o necessário */
-    z-index: 10
+    height: 60px; /* ajuste conforme a altura da navbar */
+    background-color: #333; /* cor de exemplo para a navbar */
+    z-index: 10; /* garante que a navbar esteja acima do conteúdo */
 }
 
 

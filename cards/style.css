@@ -15,32 +15,26 @@ body {
     color: var(--cor-texto);
 }
 
-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px; /* altura da navbar */
-    background-color: #333; /* cor da navbar */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 10; /* garante que a navbar fique acima dos outros elementos */
-}
-
-main {
-    margin-top: 60px; /* ajusta para ficar abaixo da navbar */
-    max-width: 1200px; /* largura máxima do conteúdo */
-    margin: 60px auto 0 auto; /* centraliza o conteúdo e dá espaçamento abaixo da navbar */
+main{
     padding: 20px;
 }
 
-h2 {
+h2, h3, strong{
+    font-weight: bold;
+}
+
+h2{
+    /* Rem: unidade de medida relativa ao font-size do elemento raiz (html) */
     font-size: 1.75rem;
     text-align: center;
 }
 
-.produtos-lista {
+h3{
+    /* em: Unidade de medida relativa ao font-size do elemento imediatamente pai */
+    font-size: 1.5em;
+}
+
+.produto-lista{
     margin-top: 24px;
     display: flex;
     flex-wrap: wrap;
@@ -48,7 +42,12 @@ h2 {
     justify-content: center;
 }
 
-.produtos-lista .produto {
+.produto-lista .produto img{
+    width: 180px;
+    border-radius: 14px;
+}
+
+.produto-lista .produto{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,34 +56,16 @@ h2 {
     gap: 18px;
     width: 200px;
     background-color: var(--cor-fundo-card);
-    box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.3);
-    transition: 0.4s;
+    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
+    transition: 0.5s;
 }
 
-.produtos-lista .produto:hover {
-    cursor: pointer;
-    transform: scale(1.05);
+.produto-lista .produto:hover{
+    /*background-color: blue */
+    cursor: pointer; 
+    transform: scale(1.08)
 }
 
-.produtos-lista .produto img {
-    width: 180px;
-    border-radius: 14px;
-}
-
-.produtos-lista .produto span {
+.produto-lista, .produto span{
     text-align: justify;
-}
-
-/* Layout responsivo para telas maiores */
-@media (min-width: 1200px) {
-    .produtos-lista .produto {
-        width: 220px; /* aumenta o tamanho dos cards em telas maiores */
-    }
-}
-
-/* Layout para telas menores */
-@media (max-width: 768px) {
-    .produtos-lista {
-        flex-direction: column; /* empilha os cards em telas pequenas */
-    }
 }

@@ -2,6 +2,10 @@
 @import url('reset.css');
 @import url('/Navbar/style.css');
 
+main {
+    margin-top: 80px; /* ajuste conforme a altura da navbar */
+}
+
 :root{
     --cor-fundo: #d5d5c9;
     --cor-texto: #1d1d1d;
@@ -17,9 +21,12 @@ body{
 }
 
 
-main {
-    padding: 20px;
-    margin-top: 80px; /* ajuste conforme a altura da navbar */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px; /* ajuste conforme o necessário */
+    z-index: 10
 }
 
 

@@ -1,9 +1,9 @@
-/* Importação da fonte padrão da página*/
+/* Importação da fonte padrão da página */
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url("reset.css");/*Importação do arquivo CSS que reseta o navegador */
+@import url("reset.css");/* Importação do arquivo CSS que reseta o navegador */
 
 /* Declaração das variáveis */
-:root{
+:root {
     --cor-fundo: #d5d5c9;
     --cor-texto: #1d1d1d;
     --cor-fundo-card: #dededd;
@@ -14,6 +14,8 @@ body {
     font-family: "Lato", sans-serif;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
+    overflow-x: hidden; /* Impede a rolagem horizontal */
+    margin: 0; /* Remove margens padrão do body */
 }
 
 nav {
@@ -33,7 +35,7 @@ ul {
     display: flex;
     list-style: none; /* Remove os marcaadores de lista */
     gap: 30px;
-    letter-spacing: 2px;/* Espaçamento entre letras */
+    letter-spacing: 2px; /* Espaçamento entre letras */
 }
 
 a {
@@ -57,13 +59,17 @@ a:hover { /* Evento de mouse sobre o elemento */
     display: flex;
     margin-top: 24px;
     flex-wrap: wrap; /* Quebra automaticamente o conteúdo na página */
-    gap: 24px; /* Define o espaço entre linhas e colunas do elemento*/
+    gap: 24px; /* Define o espaço entre linhas e colunas do elemento */
     justify-content: center; /* Centraliza os cards no contêiner */
+    max-width: 1200px; /* Limita a largura máxima do contêiner de produtos */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Adiciona espaçamento lateral para evitar que cards toquem nas bordas */
 }
 
 .produtos-lista .produto {
     display: flex;
-    flex-direction: column; /* Muda a orientação do flex para coluna*/
+    flex-direction: column; /* Muda a orientação do flex para coluna */
     align-items: center;
     border-radius: 20px; /* Arredondamento das bordas */
     gap: 18px;
@@ -82,6 +88,13 @@ a:hover { /* Evento de mouse sobre o elemento */
 .produtos-lista .produto img {
     width: 100%; /* Faz com que a imagem se ajuste à largura do card */
     border-radius: 20px 20px 0 0; /* Arredondamento apenas na parte superior */
+}
+
+/* Justificação do texto nos cards */
+.produtos-lista .produto h3,
+.produtos-lista .produto span {
+    text-align: justify; /* Justifica o texto */
+    width: 100%; /* Garante que o texto ocupe toda a largura do card */
 }
 
 main {

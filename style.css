@@ -1,9 +1,9 @@
-/* Importação da fonte padrão da página */
+/* Importação da fonte padrão da página*/
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-@import url("reset.css"); /* Importação do arquivo CSS que reseta o navegador */
+@import url("reset.css");/*Importação do arquivo CSS que reseta o navegador */
 
 /* Declaração das variáveis */
-:root {
+:root{
     --cor-fundo: #d5d5c9;
     --cor-texto: #1d1d1d;
     --cor-fundo-card: #dededd;
@@ -73,7 +73,7 @@ a:hover { /* Evento de mouse sobre o elemento */
     border-radius: 20px; /* Arredondamento das bordas */
     gap: 18px;
     width: 200px;
-    box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.2); /* Sombra */
+    box-shadow: 10px 10px 10px 3px rgba(0, 0, 0, 0.2); /* Sombra */
     transition: 0.4s;
 }
 
@@ -91,12 +91,29 @@ h2, h3, strong {
 }
 
 h2 {
-    /* rem: relativa à font-size da tag html (raiz) */
+    text-align: center; /* Centraliza o título */
     font-size: 1.75rem;
-    text-align: center; /* Centraliza o título da seção Produtos */
 }
 
 h3 {
-    /* em: relativo ao font-size do elemento pai no código */
+    text-align: center; /* Centraliza o nome do produto */
     font-size: 1.5em;
-    text-align: center; /* Centraliza o texto do título das motos
+}
+
+.produtos-lista .produto img {
+    width: 180px;
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.produto span {
+    text-align: justify; /* Justifica o texto da descrição */
+    padding: 5px; /* Espaçamento do texto em relação às bordas do card */
+}
+
+/* Adiciona rolagem suave */
+html {
+    scroll-behavior: smooth; 
+}
+.produtos-lista .produto h3 {
+    text-align: center; /* Centraliza o texto do título */
+}

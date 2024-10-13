@@ -73,7 +73,7 @@ a:hover { /* Evento de mouse sobre o elemento */
     align-items: center;
     border-radius: 20px; /* Arredondamento das bordas */
     gap: 18px;
-    width: 200px; /* Define a largura dos cards */
+    width: 300px; /* Define a largura dos cards */
     box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.2); /* Sombra */
     transition: 0.4s;
     background-color: var(--cor-fundo-card); /* Fundo do card */

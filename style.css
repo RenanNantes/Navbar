@@ -15,6 +15,7 @@ body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
 }
+
 nav {
     background-color: #23232e;
     display: flex;
@@ -22,6 +23,7 @@ nav {
     align-items: center;
     height: 8vh;
 }
+
 #logo {
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -31,76 +33,65 @@ ul {
     display: flex;
     list-style: none; /* Remove os marcaadores de lista */
     gap: 30px;
-    letter-spacing: 2px;/* Espaçameto entre letras */
+    letter-spacing: 2px;/* Espaçamento entre letras */
 }
+
 a {
     color: #ffffff;
     text-decoration: none;
     opacity: 0.5; /* Opacidade dos itens do seletor */
     transition: 0.4s; /* Tempo de transição para evento */
 }
+
 a:hover { /* Evento de mouse sobre o elemento */
     opacity: 1; 
     font-weight: bold;
 }
+
 .active {
     opacity: 1;
     font-weight: bold;
 }
-.produtos-lista{
+
+.produtos-lista {
     display: flex;
     margin-top: 24px;
     flex-wrap: wrap; /* Quebra automaticamente o conteúdo na página */
     gap: 24px; /* Define o espaço entre linhas e colunas do elemento*/
-    justify-content: center;
+    justify-content: center; /* Centraliza os cards no contêiner */
 }
-.produto{
-    padding: 14px;
-    background-color: var(--cor-fundo-card);
-}
-.produtos-lista .produto{
+
+.produtos-lista .produto {
     display: flex;
     flex-direction: column; /* Muda a orientação do flex para coluna*/
     align-items: center;
     border-radius: 20px; /* Arredondamento das bordas */
     gap: 18px;
-    width: 200px;
+    width: 200px; /* Define a largura dos cards */
     box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.2); /* Sombra */
     transition: 0.4s;
+    background-color: var(--cor-fundo-card); /* Fundo do card */
 }
-.produtos-lista .produto:hover{
+
+.produtos-lista .produto:hover {
     transform: scale(1.05); /* Atributo transform define o que responderá ao evento */
     cursor: pointer;
 }
+
+/* Certifique-se de que a imagem não ultrapasse o tamanho do card */
+.produtos-lista .produto img {
+    width: 100%; /* Faz com que a imagem se ajuste à largura do card */
+    border-radius: 20px 20px 0 0; /* Arredondamento apenas na parte superior */
+}
+
 main {
     padding: 20px;
 }
-h2, h3, strong{
-    font-weight: bold;
+
+h2, h3, strong {
+    font-weight: 700; /* Aplica um peso de fonte mais forte */
 }
-h2{
-    /* rem: relativa à font-site da tag html (raiz)*/
-    font-size: 1.75rem;
-}
-h3{
-    /* em: relativo ao font-size do elemento pai no código*/
-    font-size: 1.5em;
-}
-.produtos-lista .produto img{
-    width: 180px;
-    border-radius: 20px;
-}
-.produtos-lista .produto span{
-    text-align: center;
-}
-#cadastro{
-    display: flex;
-    justify-content: left;
-    margin-left: 40px;
-    margin-top: 40px;
-    width: 700px;
-    padding: 20px;
-    background-color: var(--cor-fundo-card);
-    border-radius: 20px;
-    box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.2);
+
+h1 {
+    text-align: center; /* Alinha o texto ao centro */
 }

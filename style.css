@@ -1,73 +1,106 @@
-@import url('reset.css');
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* Importação da fonte padrão da página*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("reset.css");/*Importação do arquivo CSS que reseta o navegador */
 
+/* Declaração das variáveis */
 :root{
-    --cor-fundo: black;
-    --cor-texto: white;
-    --cor-fundo-card: gray;
-    font-size: 14px;
+    --cor-fundo: #d5d5c9;
+    --cor-texto: #1d1d1d;
+    --cor-fundo-card: #dededd;
+    font-size: 16px;
 }
 
-
-body{
-    font-family: 'montserrat', sans-serif;
-    background-image: none;
+body {
+    font-family: "Lato", sans-serif;
     background-color: var(--cor-fundo);
-    color: var(--cor-texto)
-
+    color: var(--cor-texto);
+}
+nav {
+    background-color: #23232e;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+}
+#logo {
+    text-transform: uppercase;
+    letter-spacing: 4px;
 }
 
-main{
+ul {
+    display: flex;
+    list-style: none; /* Remove os marcaadores de lista */
+    gap: 30px;
+    letter-spacing: 2px;/* Espaçameto entre letras */
+}
+a {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.5; /* Opacidade dos itens do seletor */
+    transition: 0.4s; /* Tempo de transição para evento */
+}
+a:hover { /* Evento de mouse sobre o elemento */
+    opacity: 1; 
+    font-weight: bold;
+}
+.active {
+    opacity: 1;
+    font-weight: bold;
+}
+.produtos-lista{
+    display: flex;
+    margin-top: 24px;
+    flex-wrap: wrap; /* Quebra automaticamente o conteúdo na página */
+    gap: 24px; /* Define o espaço entre linhas e colunas do elemento*/
+    justify-content: center;
+}
+.produto{
+    padding: 14px;
+    background-color: var(--cor-fundo-card);
+}
+.produtos-lista .produto{
+    display: flex;
+    flex-direction: column; /* Muda a orientação do flex para coluna*/
+    align-items: center;
+    border-radius: 20px; /* Arredondamento das bordas */
+    gap: 18px;
+    width: 200px;
+    box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.2); /* Sombra */
+    transition: 0.4s;
+}
+.produtos-lista .produto:hover{
+    transform: scale(1.05); /* Atributo transform define o que responderá ao evento */
+    cursor: pointer;
+}
+main {
     padding: 20px;
 }
-
 h2, h3, strong{
     font-weight: bold;
 }
-
 h2{
-    /* Rem: unidade de medida relativa ao font-size do elemento raiz (html) */
+    /* rem: relativa à font-site da tag html (raiz)*/
     font-size: 1.75rem;
-    text-align: center;
 }
-
 h3{
-    /* em: Unidade de medida relativa ao font-size do elemento imediatamente pai */
+    /* em: relativo ao font-size do elemento pai no código*/
     font-size: 1.5em;
 }
-
-.produto-lista{
-    margin-top: 24px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-}
-
-.produto-lista .produto img{
+.produtos-lista .produto img{
     width: 180px;
-    border-radius: 14px;
-}
-
-.produto-lista .produto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     border-radius: 20px;
+}
+.produtos-lista .produto span{
+    text-align: center;
+}
+#cadastro{
+    display: flex;
+    justify-content: left;
+    margin-left: 40px;
+    margin-top: 40px;
+    width: 700px;
     padding: 20px;
-    gap: 18px;
-    width: 200px;
     background-color: var(--cor-fundo-card);
-    box-shadow: 0px 0px 12px 4px rgba(0,0,0,0.1);
-    transition: 0.5s;
-}
-
-.produto-lista .produto:hover{
-    /*background-color: blue */
-    cursor: pointer; 
-    transform: scale(1.08)
-}
-
-.produto-lista, .produto span{
-    text-align: justify;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.2);
 }

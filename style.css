@@ -73,10 +73,11 @@ a:hover { /* Evento de mouse sobre o elemento */
     align-items: center;
     border-radius: 20px; /* Arredondamento das bordas */
     gap: 18px;
-    width: 300px; /* Define a largura dos cards */
+    width: 200px; /* Define a largura dos cards */
     box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.2); /* Sombra */
     transition: 0.4s;
     background-color: var(--cor-fundo-card); /* Fundo do card */
+    padding: 16px; /* Adiciona espaçamento interno ao card */
 }
 
 .produtos-lista .produto:hover {
@@ -97,12 +98,30 @@ a:hover { /* Evento de mouse sobre o elemento */
     width: 100%; /* Garante que o texto ocupe toda a largura do card */
 }
 
+/* Centraliza o preço no card */
+.produtos-lista .produto span:last-child {
+    text-align: center; /* Centraliza o valor */
+    font-weight: bold; /* Deixa o valor em negrito */
+}
+
 main {
     padding: 20px;
 }
 
 h2, h3, strong {
     font-weight: 700; /* Aplica um peso de fonte mais forte */
+}
+
+h2 {
+    /* Centraliza o título "Produtos" */
+    text-align: center; 
+    font-size: 1.75rem; /* Aumenta o tamanho do título */
+    margin-bottom: 24px; /* Adiciona espaço abaixo do título */
+}
+
+h3 {
+    /* em: relativo ao font-size do elemento pai no código */
+    font-size: 1.5em;
 }
 
 h1 {
